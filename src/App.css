@@ -1,0 +1,17 @@
+.app__container {
+  width: 100%;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.app__body {
+  display: flex;
+  flex-direction: column;
+}
+.app__title {
+  margin-top: 30px;
+  font-size: 3rem;
+  width: max-content;
+  margin: 0 auto;
+}
