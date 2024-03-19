@@ -61,20 +61,24 @@ const Game = () => {
   };
 
   useEffect(() => {
-    const countdownInterval = setInterval(() => {
-      setPlayTime((prevTime) => {
-        if (prevTime > 0) {
-          return prevTime - 1;
-        } else {
-          clearInterval(countdownInterval);
-          console.log("¡Tiempo terminado!");
-          return 0;
-        }
-      });
-    }, 1000);
+    let countdownInterval;
+
+    if (successes < 12) {
+      countdownInterval = setInterval(() => {
+        setPlayTime((prevTime) => {
+          if (prevTime > 0) {
+            return prevTime - 1;
+          } else {
+            clearInterval(countdownInterval);
+            console.log("¡Tiempo terminado!");
+            return 0;
+          }
+        });
+      }, 1000);
+    }
 
     return () => clearInterval(countdownInterval); // Limpiar el intervalo al desmontar el componente
-  }, []); // Vacío, para que solo se ejecute una vez al montar el componente
+  }, [successes]); // Ejecutar el efecto cuando successes cambie
 
   return (
     <section className="game__container">
