@@ -30,7 +30,6 @@
   border-left: 15px solid transparent;
   border-bottom: 30px solid var(--letterColor);
   transform: rotate(90deg);
-  border-radius: 5px;
 }
 .home__startgame__link {
   text-decoration: none;
