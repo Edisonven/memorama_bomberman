@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card.jsx";
 import { images } from "../../images.js";
 import { Link } from "react-router-dom";
+import ReactAudioPlayer from "react-audio-player";
 
 const Game = () => {
   const [cards, setCards] = useState([]);
@@ -109,14 +110,24 @@ const Game = () => {
           );
         })}
       </div>
-      <audio
-        className="home__startgame__audio__controls"
-        controls
-        autoPlay
-        loop
-      >
-        <source src="/bomberman_3.mp3" type="audio/mpeg" />
-      </audio>
+      {successes < 12 ? (
+        <ReactAudioPlayer
+          className="home__startgame__audio__controls"
+          src="/bomberman_3.mp3"
+          autoPlay
+          controls
+          loop={true}
+        ></ReactAudioPlayer>
+      ) : (
+        <ReactAudioPlayer
+          className="home__startgame__audio__controls home__startgame__audio__controls__endgame"
+          src="/bomberman_5.mp3"
+          autoPlay
+          controls
+          volume={0.5}
+          loop={false}
+        ></ReactAudioPlayer>
+      )}
       <div className="home__backtostart">
         <Link to="/" className="home__backtostart__link">
           Volver al inicio
