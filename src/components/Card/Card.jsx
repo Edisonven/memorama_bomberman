@@ -18,7 +18,12 @@ const Card = ({ name, number, frontFace }) => {
           alt=""
           onClick={handleClickCard}
         />
-        <img className="card__img" src={frontFace} alt="" />
+        <img
+          className="card__img"
+          src={frontFace}
+          alt=""
+          onClick={handleClickCard}
+        />
       </ReactCardFlip>
     </div>
   );

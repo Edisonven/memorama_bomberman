@@ -6,6 +6,8 @@ import { images } from "./images.js";
 function App() {
   const [cards, setCards] = useState([]);
 
+  const newCards = cards.sort(() => Math.random() - 0.5);
+
   useEffect(() => {
     setCards(images);
   }, []);
@@ -14,7 +16,7 @@ function App() {
     <section className="app__container">
       <h1 className="app__title">Memorama</h1>
       <div className="app__body">
-        {cards.map((card, index) => {
+        {newCards.map((card, index) => {
           return (
             <Card
               key={card.id}
