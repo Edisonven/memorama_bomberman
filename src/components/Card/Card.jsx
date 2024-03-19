@@ -1,12 +1,17 @@
 import { useState } from "react";
 import "../Card/card.css";
 import ReactCardFlip from "react-card-flip";
+import backFace from "../../../public/2.png";
 
-const Card = ({ name, number, frontFace }) => {
+const Card = ({ name, number, frontFace, flipCard }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClickCard = () => {
-    setIsFlipped(!isFlipped);
+    const value = flipCard(name, number);
+    if (value !== 0) {
+      setIsFlipped(!isFlipped);
+    }
+    return;
   };
 
   return (
@@ -14,7 +19,7 @@ const Card = ({ name, number, frontFace }) => {
       <ReactCardFlip isFlipped={isFlipped}>
         <img
           className="card__img"
-          src="./2.png"
+          src={backFace}
           alt=""
           onClick={handleClickCard}
         />

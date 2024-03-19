@@ -6,23 +6,38 @@ import { images } from "./images.js";
 function App() {
   const [cards, setCards] = useState([]);
 
-  const newCards = cards.sort(() => Math.random() - 0.5);
+  const [firstCard, setFirstCard] = useState({});
+  const [secondCard, setSecondCard] = useState({});
 
   useEffect(() => {
-    setCards(images);
+    const newImages = images.sort(() => Math.random() - 0.5);
+    setCards(newImages);
   }, []);
+
+  const flipCard = (number, name) => {
+    if (firstCard.name === name && firstCard.number === number) {
+      return 0;
+    }
+    if (!firstCard.name) {
+      setFirstCard({ name, number });
+    } else if (!secondCard.name) {
+      setSecondCard({ name, number });
+    }
+    return 1;
+  };
 
   return (
     <section className="app__container">
       <h1 className="app__title">Memorama</h1>
       <div className="app__body">
-        {newCards.map((card, index) => {
+        {cards.map((card, index) => {
           return (
             <Card
               key={card.id}
               name={card.name}
               frontFace={card.src}
               number={index}
+              flipCard={flipCard}
             />
           );
         })}
