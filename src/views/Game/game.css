@@ -11,7 +11,11 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.game__navbar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .game__body {
   display: flex;
   align-items: center;
@@ -29,7 +33,7 @@
   width: max-content;
   margin: 0 auto;
 }
-.game__navbar__timeindicator {
+.game__navbar__desc {
   font-size: 3rem;
-  filter: drop-shadow(4px 4px 0 #000);
+  filter: drop-shadow(3px 3px 0 #000);
 }

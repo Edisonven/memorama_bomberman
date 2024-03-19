@@ -10,6 +10,7 @@ const Game = () => {
   const [unflippedCards, setUnflippedCards] = useState([]);
   const [disabledCards, setDisabledCards] = useState([]);
   const [playTime, setPlayTime] = useState(200);
+  const [attempts, setAttempts] = useState(0);
 
   useEffect(() => {
     const newImages = images.sort(() => Math.random() - 0.5);
@@ -24,6 +25,7 @@ const Game = () => {
       setFirstCard({ name, number });
     } else if (!secondCard.name) {
       setSecondCard({ name, number });
+      setAttempts((prevAttempts) => prevAttempts + 1); // Incrementar el contador de intentos
     }
     return 1;
   };
@@ -74,7 +76,14 @@ const Game = () => {
     <section className="game__container">
       <nav className="game__navbar__container">
         <div className="game__navbar__time">
-          <p className="game__navbar__timeindicator">Time {playTime}</p>
+          <p className="game__navbar__desc game__navbar__timeindicator">
+            Tiempo: {playTime}
+          </p>
+        </div>
+        <div className="game__navbar__attemps__container">
+          <p className="game__navbar__desc game__navbar__attemps">
+            Intentos {attempts}
+          </p>
         </div>
       </nav>
       <div className="game__body">
