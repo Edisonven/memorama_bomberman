@@ -75,6 +75,14 @@ const Game = () => {
           );
         })}
       </div>
+      <audio
+        className="home__startgame__audio__controls"
+        controls
+        autoPlay
+        loop
+      >
+        <source src="/bomberman_3.mp3" type="audio/mpeg" />
+      </audio>
     </section>
   );
 };
