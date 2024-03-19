@@ -14,6 +14,9 @@ const Home = () => {
             start
           </Link>
         </div>
+        <div className="home__startgame__desc__container">
+          <h1 className="home__startgame__desc">MEMORAMA GAME</h1>
+        </div>
       </div>
     </section>
   );

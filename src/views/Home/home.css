@@ -14,12 +14,13 @@
 }
 .home__logo__img {
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
 }
 .home__startgame__link__container {
   margin-top: 50px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 .home__startgame__icon {
@@ -35,4 +36,10 @@
   text-decoration: none;
   color: var(--letterColor);
   font-size: 2.5rem;
+}
+.home__startgame__desc__container {
+  margin-top: 80px;
+}
+.home__startgame__desc {
+  font-size: 3rem;
 }
