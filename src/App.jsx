@@ -55,6 +55,11 @@ function App() {
 
   return (
     <section className="app__container">
+      <nav className="app__navbar__container">
+        <div className="app__navbar__time">
+          <p className="app__navbar__timeindicator">Time</p>
+        </div>
+      </nav>
       <div className="app__body">
         {cards.map((card, index) => {
           return (

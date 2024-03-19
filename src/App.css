@@ -1,6 +1,4 @@
 .app__container {
-  display: flex;
-  align-items: center;
   width: 100%;
   height: 100vh;
   max-width: 800px;
@@ -13,15 +11,17 @@
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  border: 1px solid #ffffffde;
   border-radius: 20px;
   overflow: hidden;
   padding: 20px;
-  margin-top: 70px;
 }
 .app__title {
   margin-top: 30px;
   font-size: 3rem;
   width: max-content;
   margin: 0 auto;
+}
+.app__navbar__timeindicator {
+  font-size: 3rem;
+  filter: drop-shadow(4px 4px 0 #000);
 }
