@@ -9,7 +9,7 @@ function App() {
     <section className="app__container">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/loading" element={<Loading />} />
+        <Route path="/loading..." element={<Loading />} />
         <Route path="/game" element={<Game />} />
       </Routes>
     </section>
