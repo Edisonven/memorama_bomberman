@@ -11,6 +11,7 @@ const Game = () => {
   const [disabledCards, setDisabledCards] = useState([]);
   const [playTime, setPlayTime] = useState(200);
   const [attempts, setAttempts] = useState(0);
+  const [successes, setSuccesses] = useState(0);
 
   useEffect(() => {
     const newImages = images.sort(() => Math.random() - 0.5);
@@ -38,6 +39,7 @@ const Game = () => {
     if (firstCard.name && secondCard.name) {
       const match = firstCard.name === secondCard.name;
       match ? disableCards() : unflipCards();
+      match ? setSuccesses((prevMove) => prevMove + 1) : null;
     }
   };
 
@@ -87,7 +89,7 @@ const Game = () => {
         </div>
         <div className="game__navbar__successes__container">
           <p className="game__navbar__desc game__navbar__successes">
-            Aciertos {attempts}
+            Aciertos {successes}
           </p>
         </div>
       </nav>

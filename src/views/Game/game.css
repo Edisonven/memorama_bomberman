@@ -13,6 +13,7 @@
   background-position: center;
 }
 .game__navbar__container {
+  padding: 0 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
