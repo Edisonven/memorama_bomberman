@@ -85,6 +85,11 @@ const Game = () => {
             Intentos {attempts}
           </p>
         </div>
+        <div className="game__navbar__successes__container">
+          <p className="game__navbar__desc game__navbar__successes">
+            Aciertos {attempts}
+          </p>
+        </div>
       </nav>
       <div className="game__body">
         {cards.map((card, index) => {
