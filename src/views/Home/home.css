@@ -43,3 +43,6 @@
 .home__startgame__desc {
   font-size: 3rem;
 }
+.home__startgame__audio__controls {
+  visibility: hidden;
+}
