@@ -1,0 +1,11 @@
+.loading__container {
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading__title {
+  font-size: 3rem;
+}
