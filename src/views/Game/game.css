@@ -53,3 +53,13 @@
   filter: drop-shadow(3px 3px 0 #000);
   letter-spacing: -5px;
 }
+.home__backtoplay__link {
+  text-decoration: none;
+  color: var(--letterColor);
+  position: absolute;
+  bottom: 70px;
+  left: 3%;
+  font-size: 2rem;
+  filter: drop-shadow(3px 3px 0 #000);
+  letter-spacing: -5px;
+}

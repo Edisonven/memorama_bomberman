@@ -137,6 +137,13 @@ const Game = () => {
           Volver al inicio
         </Link>
       </div>
+      {successes === 12 ? (
+        <div className="home__backtoplay">
+          <Link to="/loading" className="home__backtoplay__link">
+            Volver a jugar
+          </Link>
+        </div>
+      ) : null}
     </section>
   );
 };
