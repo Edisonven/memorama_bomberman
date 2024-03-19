@@ -1,18 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../Card/card.css";
 import ReactCardFlip from "react-card-flip";
 import backFace from "../../../public/2.png";
 
-const Card = ({ name, number, frontFace, flipCard }) => {
+const Card = ({
+  number,
+  name,
+  frontFace,
+  flipCard,
+  unflippedCards,
+  disabledCards,
+}) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const handleClickCard = () => {
-    const value = flipCard(name, number);
+    const value = flipCard(number, name);
     if (value !== 0) {
       setIsFlipped(!isFlipped);
     }
     return;
   };
+
+  useEffect(() => {
+    if (unflippedCards.includes(number)) {
+      setTimeout(() => {
+        setIsFlipped(false);
+      }, 700);
+    }
+  }, [unflippedCards]);
 
   return (
     <div className="card__container">

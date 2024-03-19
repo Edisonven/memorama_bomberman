@@ -5,9 +5,10 @@ import { images } from "./images.js";
 
 function App() {
   const [cards, setCards] = useState([]);
-
   const [firstCard, setFirstCard] = useState({});
   const [secondCard, setSecondCard] = useState({});
+  const [unflippedCards, setUnflippedCards] = useState([]);
+  const [disabledCards, setDisabledCards] = useState([]);
 
   useEffect(() => {
     const newImages = images.sort(() => Math.random() - 0.5);
@@ -26,6 +27,32 @@ function App() {
     return 1;
   };
 
+  useEffect(() => {
+    checkMatch();
+  }, [secondCard]);
+
+  const checkMatch = () => {
+    if (firstCard.name && secondCard.name) {
+      const match = firstCard.name === secondCard.name;
+      match ? disableCards() : unflipCards();
+    }
+  };
+
+  const disableCards = () => {
+    setDisabledCards([firstCard.number, secondCard.number]);
+    resetCards();
+  };
+
+  const unflipCards = () => {
+    setUnflippedCards([firstCard.number, secondCard.number]);
+    resetCards();
+  };
+
+  const resetCards = () => {
+    setFirstCard({});
+    setSecondCard({});
+  };
+
   return (
     <section className="app__container">
       <h1 className="app__title">Memorama</h1>
@@ -38,6 +65,8 @@ function App() {
               frontFace={card.src}
               number={index}
               flipCard={flipCard}
+              unflippedCards={unflippedCards}
+              disabledCards={disabledCards}
             />
           );
         })}
