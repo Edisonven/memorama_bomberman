@@ -32,7 +32,7 @@ const Card = ({
     if (unflippedCards.includes(number)) {
       setTimeout(() => {
         setIsFlipped(false);
-      }, 700);
+      }, 400);
     }
   }, [unflippedCards]);
 

@@ -40,3 +40,6 @@
   font-size: 3rem;
   filter: drop-shadow(3px 3px 0 #000);
 }
+.home__startgame__audio__controls {
+  visibility: hidden;
+}
