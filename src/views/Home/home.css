@@ -41,6 +41,7 @@
   margin-top: 80px;
 }
 .home__startgame__desc {
+  text-align: center;
   font-size: 3rem;
 }
 .home__startgame__audio__controls {
