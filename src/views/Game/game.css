@@ -1,6 +1,7 @@
 .game__container {
   display: grid;
   grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -26,6 +27,7 @@
   overflow: hidden;
   padding: 20px;
   max-width: 800px;
+  margin: 0 auto;
 }
 .game__title {
   margin-top: 30px;
