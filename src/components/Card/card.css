@@ -6,4 +6,8 @@
   height: 150px;
   border-radius: 8px;
   cursor: pointer;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
 }

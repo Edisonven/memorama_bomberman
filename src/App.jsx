@@ -14,8 +14,15 @@ function App() {
     <section className="app__container">
       <h1 className="app__title">Memorama</h1>
       <div className="app__body">
-        {cards.map((card) => {
-          return <Card />;
+        {cards.map((card, index) => {
+          return (
+            <Card
+              key={card.id}
+              name={card.name}
+              frontFace={card.src}
+              number={index}
+            />
+          );
         })}
       </div>
     </section>
