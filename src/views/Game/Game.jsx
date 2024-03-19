@@ -119,7 +119,7 @@ const Game = () => {
       </audio>
       <div className="home__backtostart">
         <Link to="/" className="home__backtostart__link">
-          Volver al inicio{" "}
+          Volver al inicio
         </Link>
       </div>
     </section>
