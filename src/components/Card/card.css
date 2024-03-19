@@ -1,0 +1,7 @@
+.card__container {
+  background-image: url(../../../public/1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+}
