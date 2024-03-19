@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Card from "./components/Card/Card.jsx";
+import { images } from "./images.js";
 
 function App() {
-  const [cards, setCards] = useState([
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 10, 10, 11, 11, 12, 12,
-  ]);
+  const [cards, setCards] = useState([]);
+
+  useEffect(() => {
+    setCards(images);
+  }, []);
 
   return (
     <section className="app__container">
