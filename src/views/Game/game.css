@@ -43,3 +43,13 @@
 .home__startgame__audio__controls {
   visibility: hidden;
 }
+.home__backtostart__link {
+  text-decoration: none;
+  color: var(--letterColor);
+  position: absolute;
+  bottom: 70px;
+  right: 3%;
+  font-size: 2rem;
+  filter: drop-shadow(3px 3px 0 #000);
+  letter-spacing: -5px;
+}

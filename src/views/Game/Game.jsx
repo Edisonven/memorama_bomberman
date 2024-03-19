@@ -2,6 +2,7 @@ import "../Game/game.css";
 import { useState, useEffect } from "react";
 import Card from "../../components/Card/Card.jsx";
 import { images } from "../../images.js";
+import { Link } from "react-router-dom";
 
 const Game = () => {
   const [cards, setCards] = useState([]);
@@ -116,6 +117,11 @@ const Game = () => {
       >
         <source src="/bomberman_3.mp3" type="audio/mpeg" />
       </audio>
+      <div className="home__backtostart">
+        <Link to="/" className="home__backtostart__link">
+          Volver al inicio{" "}
+        </Link>
+      </div>
     </section>
   );
 };
