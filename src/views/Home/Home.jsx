@@ -25,7 +25,7 @@ const Home = () => {
         src="/bomberman_1.mp3"
         autoPlay
         controls
-        volume={0.5}
+        volume={0.4}
         loop={false}
       ></ReactAudioPlayer>
     </section>
