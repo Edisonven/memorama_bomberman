@@ -48,3 +48,10 @@
 .home__startgame__audio__controls {
   visibility: hidden;
 }
+
+@media (max-width: 576px) {
+  .home__logo__img {
+    aspect-ratio: 4/2;
+    height: auto;
+  }
+}
