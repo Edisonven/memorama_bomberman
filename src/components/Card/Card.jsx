@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "../Card/card.css";
 import ReactCardFlip from "react-card-flip";
-import backFace from "../../../public/2.png";
+import backFace from "/2.png";
 
 const Card = ({
   number,

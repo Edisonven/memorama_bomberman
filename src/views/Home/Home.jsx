@@ -17,7 +17,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="home__startgame__desc__container">
-          <h1 className="home__startgame__desc">MEMORAMA GAME</h1>
+          <p className="home__startgame__desc">MEMORAMA GAME</p>
         </div>
       </div>
       <ReactAudioPlayer
