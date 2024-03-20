@@ -72,8 +72,10 @@
   }
   .home__backtoplay__link {
     font-size: 1.5rem;
+    bottom: 8%;
   }
   .home__backtostart__link {
     font-size: 1.5rem;
+    bottom: 8%;
   }
 }
