@@ -63,3 +63,17 @@
   filter: drop-shadow(3px 3px 0 #000);
   letter-spacing: -5px;
 }
+@media (max-width: 576px) {
+  .game__navbar__desc {
+    font-size: 1rem;
+  }
+  .game__navbar__container {
+    padding: 0 10px;
+  }
+  .home__backtoplay__link {
+    font-size: 2rem;
+  }
+  .home__backtostart__link {
+    font-size: 1.5rem;
+  }
+}
