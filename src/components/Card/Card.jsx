@@ -10,9 +10,11 @@ const Card = ({
   flipCard,
   unflippedCards,
   disabledCards,
+  playtime,
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [hasEvent, setHasEvent] = useState(true);
+  const [isClickable, setIsClickable] = useState(true);
 
   const handleClickCard = () => {
     const value = flipCard(number, name);
@@ -36,6 +38,12 @@ const Card = ({
     }
   }, [unflippedCards]);
 
+  useEffect(() => {
+    if (playtime === 0) {
+      setIsClickable(false);
+    }
+  }, [playtime]);
+
   return (
     <div className="card__container">
       <ReactCardFlip isFlipped={isFlipped}>
@@ -43,13 +51,13 @@ const Card = ({
           className="card__img"
           src={backFace}
           alt=""
-          onClick={hasEvent ? handleClickCard : null}
+          onClick={isClickable && hasEvent ? handleClickCard : null}
         />
         <img
           className="card__img"
           src={frontFace}
           alt=""
-          onClick={hasEvent ? handleClickCard : null}
+          onClick={isClickable && hasEvent ? handleClickCard : null}
         />
       </ReactCardFlip>
     </div>

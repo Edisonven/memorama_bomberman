@@ -110,6 +110,7 @@ const Game = () => {
               flipCard={flipCard}
               unflippedCards={unflippedCards}
               disabledCards={disabledCards}
+              playtime={playTime}
             />
           );
         })}
@@ -147,7 +148,7 @@ const Game = () => {
           Volver al inicio
         </Link>
       </div>
-      {successes === 12 ? (
+      {successes === 12 || playTime === 0 ? (
         <div className="home__backtoplay">
           <Link to="/loading..." className="home__backtoplay__link">
             Volver a jugar
