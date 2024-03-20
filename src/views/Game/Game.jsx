@@ -139,7 +139,7 @@ const Game = () => {
       </div>
       {successes === 12 ? (
         <div className="home__backtoplay">
-          <Link to="/loading" className="home__backtoplay__link">
+          <Link to="/loading..." className="home__backtoplay__link">
             Volver a jugar
           </Link>
         </div>
