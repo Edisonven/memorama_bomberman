@@ -11,7 +11,7 @@ const Game = () => {
   const [secondCard, setSecondCard] = useState({});
   const [unflippedCards, setUnflippedCards] = useState([]);
   const [disabledCards, setDisabledCards] = useState([]);
-  const [playTime, setPlayTime] = useState(200);
+  const [playTime, setPlayTime] = useState(100);
   const [attempts, setAttempts] = useState(0);
   const [successes, setSuccesses] = useState(0);
 
@@ -114,23 +114,33 @@ const Game = () => {
           );
         })}
       </div>
-      {successes < 12 ? (
+      {successes === 12 ? (
         <ReactAudioPlayer
           className="home__startgame__audio__controls"
-          src="/bomberman_3.mp3"
-          autoPlay
-          controls
-          loop={true}
-        ></ReactAudioPlayer>
-      ) : (
-        <ReactAudioPlayer
-          className="home__startgame__audio__controls home__startgame__audio__controls__endgame"
           src="/bomberman_5.mp3"
           autoPlay
           controls
           volume={0.5}
           loop={false}
-        ></ReactAudioPlayer>
+        />
+      ) : playTime === 0 ? (
+        <ReactAudioPlayer
+          className="home__startgame__audio__controls home__startgame__audio__controls__endgame"
+          src="/bomberman_6.mp3"
+          autoPlay
+          controls
+          volume={0.5}
+          loop={false}
+        />
+      ) : (
+        <ReactAudioPlayer
+          className="home__startgame__audio__controls home__startgame__audio__controls__endgame"
+          src="/bomberman_3.mp3"
+          autoPlay
+          controls
+          volume={0.5}
+          loop={true}
+        />
       )}
       <div className="home__backtostart">
         <Link to="/" className="home__backtostart__link">
