@@ -70,7 +70,6 @@ const Game = () => {
             return prevTime - 1;
           } else {
             clearInterval(countdownInterval);
-            console.log("¡Tiempo terminado!");
             return 0;
           }
         });
