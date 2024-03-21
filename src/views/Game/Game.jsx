@@ -11,7 +11,7 @@ const Game = () => {
   const [secondCard, setSecondCard] = useState({});
   const [unflippedCards, setUnflippedCards] = useState([]);
   const [disabledCards, setDisabledCards] = useState([]);
-  const [playTime, setPlayTime] = useState(100);
+  const [playTime, setPlayTime] = useState(85);
   const [attempts, setAttempts] = useState(0);
   const [successes, setSuccesses] = useState(0);
 
