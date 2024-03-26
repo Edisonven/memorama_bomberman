@@ -37,6 +37,9 @@
   text-decoration: none;
   color: var(--letterColor);
   font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 .home__startgame__desc__container {
   margin-top: 80px;

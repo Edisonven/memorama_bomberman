@@ -11,8 +11,8 @@ const Home = () => {
       </div>
       <div className="home__stargame">
         <div className="home__startgame__link__container">
-          <div className="home__startgame__icon"></div>
           <Link to="/loading..." className="home__startgame__link">
+            <div className="home__startgame__icon"></div>
             start
           </Link>
         </div>
