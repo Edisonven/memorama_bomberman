@@ -11,7 +11,7 @@
 
 @media (max-width: 576px) {
   .card__container {
-    width: 65px;
-    height: 65px;
+    width: 60px;
+    height: 60px;
   }
 }

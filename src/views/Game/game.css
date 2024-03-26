@@ -46,7 +46,6 @@
 .home__backtostart__link {
   text-decoration: none;
   color: var(--letterColor);
-  position: absolute;
   bottom: 70px;
   right: 3%;
   font-size: 2rem;
@@ -56,7 +55,6 @@
 .home__backtoplay__link {
   text-decoration: none;
   color: var(--letterColor);
-  position: absolute;
   bottom: 70px;
   left: 3%;
   font-size: 2rem;
@@ -77,5 +75,16 @@
   .home__backtostart__link {
     font-size: 1.5rem;
     bottom: 8%;
+  }
+  .home__gamelinks__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .game__body {
+    gap: 10px;
   }
 }

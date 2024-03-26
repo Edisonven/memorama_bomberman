@@ -11,7 +11,7 @@ const Game = () => {
   const [secondCard, setSecondCard] = useState({});
   const [unflippedCards, setUnflippedCards] = useState([]);
   const [disabledCards, setDisabledCards] = useState([]);
-  const [playTime, setPlayTime] = useState(85);
+  const [playTime, setPlayTime] = useState(60);
   const [attempts, setAttempts] = useState(0);
   const [successes, setSuccesses] = useState(0);
 
@@ -114,6 +114,20 @@ const Game = () => {
           );
         })}
       </div>
+      <div className="home__gamelinks__container">
+        {successes === 12 || playTime === 0 ? (
+          <div className="home__backtoplay">
+            <Link to="/loading..." className="home__backtoplay__link">
+              Volver a jugar
+            </Link>
+          </div>
+        ) : null}
+        <div className="home__backtostart">
+          <Link to="/" className="home__backtostart__link">
+            Volver al inicio
+          </Link>
+        </div>
+      </div>
       {successes === 12 ? (
         <ReactAudioPlayer
           className="home__startgame__audio__controls"
@@ -142,18 +156,6 @@ const Game = () => {
           loop={true}
         />
       )}
-      <div className="home__backtostart">
-        <Link to="/" className="home__backtostart__link">
-          Volver al inicio
-        </Link>
-      </div>
-      {successes === 12 || playTime === 0 ? (
-        <div className="home__backtoplay">
-          <Link to="/loading..." className="home__backtoplay__link">
-            Volver a jugar
-          </Link>
-        </div>
-      ) : null}
     </section>
   );
 };
