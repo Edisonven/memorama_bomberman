@@ -70,7 +70,9 @@
   .game__navbar__container {
     padding: 0 10px;
   }
-
+  .game__body {
+    width: 375px;
+  }
   .home__gamelinks__container {
     width: 100%;
     display: flex;
